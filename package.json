@@ -12,8 +12,8 @@
     "dev:client": "cd client && npm start",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "build": "cd client && npm install && npm run build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "cd client && npm install && npm run build",
+    "deploy": "cd client && npm install && gh-pages -d build"
   },
   "cacheDirectories": [
     "node_modules",
