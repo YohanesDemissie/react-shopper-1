@@ -38,7 +38,7 @@ async function createCheckoutSession(req, res) {
     const cartItems = req.body;
     const line_items = validateCartItems(products, cartItems);
 
-    const origin = process.env.NODE_ENV === 'production' ? req.headers.origin : 'http://localhost:3000'
+    const origin = process.env.NODE_ENV === 'production' ? req.headers.origin : 'https://yohanesdemissie.github.io/react-shopper-1/'
 
     const params = {
       submit_type: "pay",
