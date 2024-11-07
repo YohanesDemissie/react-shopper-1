@@ -2,7 +2,8 @@
   "name": "react-shopper",
   "version": "0.1.0",
   "description": "Full-stack ecommerce app made with create-react-app client and Node server",
-  "homepage": "https://yohanesdemissie.github.io/react-shopper-1/#",
+  "homepage": "https://yohanesdemissie.github.io/react-shopper-1/",
+  "private": true,
   "engines": {
     "node": "12.18.2"
   },
@@ -12,8 +13,8 @@
     "dev:client": "cd client && npm start",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "build": "cd client && npm install && npm run build",
-    "predeploy": "cd client && npm install && npm run build",
-    "deploy": "cd client && npm install && gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "cacheDirectories": [
     "node_modules",
@@ -22,13 +23,13 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.16.4",
-    "gh-pages": "^6.2.0",
     "stripe": "^8.131.1",
     "use-shopping-cart": "2.1.0"
   },
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^5.3.0",
+    "gh-pages": "^6.2.0",
     "nodemon": "^2.0.7"
   }
 }
